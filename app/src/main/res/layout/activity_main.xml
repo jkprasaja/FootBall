@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/team_a"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/team_a_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:text="@string/zero_a"
+                android:textColor="#000000"
+                android:textSize="56sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="teamAScored"
+                android:paddingBottom="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp"
+                android:text="@string/goal_a" />
+
+            <TextView
+                android:id="@+id/team_a_fouls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/foul_a"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="teamAFouls"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/foul_team_a"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#0336FF"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/team_b" />
+
+            <TextView
+                android:id="@+id/team_b_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:text="@string/zero_b"
+                android:textColor="#000000"
+                android:textSize="56sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="teamBScored"
+                android:paddingBottom="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp"
+                android:text="@string/goal_b" />
+
+            <TextView
+                android:id="@+id/team_b_fouls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/foul_b"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="teamBFouls"
+                android:text="@string/foul_team_b"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="resetAllScore"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"/>
+
+</RelativeLayout>
